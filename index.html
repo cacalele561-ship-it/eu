@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fale Comigo</title>
+
+    <!-- TikTok Pixel Code Start -->
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;
+      var ttq=w[t]=w[t]||[];
+      ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+      ttq.setAndDefer=function(t,e){
+        t[e]=function(){
+          t.push([e].concat(Array.prototype.slice.call(arguments,0)))
+        }
+      };
+      for(var i=0;i<ttq.methods.length;i++)
+        ttq.setAndDefer(ttq,ttq.methods[i]);
+
+      ttq.instance=function(t){
+        for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)
+          ttq.setAndDefer(e,ttq.methods[n]);
+        return e
+      };
+
+      ttq.load=function(e,n){
+        var r="https://analytics.tiktok.com/i18n/pixel/events.js",
+            o=n&&n.partner;
+
+        ttq._i=ttq._i||{};
+        ttq._i[e]=[];
+        ttq._i[e]._u=r;
+        ttq._t=ttq._t||{};
+        ttq._t[e]=+new Date;
+        ttq._o=ttq._o||{};
+        ttq._o[e]=n||{};
+
+        n=document.createElement("script");
+        n.type="text/javascript";
+        n.async=!0;
+        n.src=r+"?sdkid="+e+"&lib="+t;
+
+        e=document.getElementsByTagName("script")[0];
+        e.parentNode.insertBefore(n,e)
+      };
+
+      ttq.load('DAEH323C77UC8FLJO6BG');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 18px 45px;
+            background: #ff1493;
+            color: #fff;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
+
+            animation: pulsar 1.5s infinite;
+        }
+
+        @keyframes pulsar {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
+            }
+
+            50% {
+                transform: scale(1.08);
+                box-shadow: 0 0 40px rgba(255, 20, 147, 1);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="botao" onclick="falarComigo()">
+            Fale Comigo
+        </button>
+    </div>
+
+    <script>
+        function falarComigo() {
+
+            // Registra o clique no TikTok Pixel
+            if (typeof ttq !== "undefined") {
+                ttq.track("Contact");
+            }
+
+            // Redireciona para o Telegram
+            setTimeout(function() {
+                window.location.href =
+                    "https://t.me/OnlyPrivVazado_bot";
+            }, 500);
+        }
+    </script>
+
+</body>
+</html>
